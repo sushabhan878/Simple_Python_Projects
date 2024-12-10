@@ -1,0 +1,109 @@
+body {  
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    background-image: url('D:\\Prodigy_Tasks\\Tic-Tac-Toe_WebApplication\\imag1.jpeg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the background covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFFF; /* Adjust color for better visibility against background */
+}
+
+#playerInfo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #4ecdc4;
+}
+
+#board {
+    margin-left: auto;
+    margin-right: auto;
+    width: 375px;
+    height: 375px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent background for the board */
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Adds a shadow to make the board stand out */
+    background-image: url('D:\\Prodigy_Tasks\\Tic-Tac-Toe_WebApplication\\imag2.jpeg');
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #D3D3D3;
+    background-color: rgba(245, 245, 245, 0.8); /* Transparent background for squares */
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.square:hover {
+    background-color: #FFFFE0;
+}
+
+#restartButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 150px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 40px;
+    font-size: 18px;
+}
+
+#restartButton:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Colors for X and O */
+.blue {
+    color: blue;
+    background-color: #D0EFFF;
+}
+
+.green {
+    color: green;
+    background-color: #E0FFD0;
+}
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.winning-message button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4ecdc4;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.winning-message.show {
+    display: block;
+}
